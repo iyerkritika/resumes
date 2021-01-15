@@ -1,5 +1,6 @@
-\documentclass[10pt,a4paper]{article}
+\documentclass[10.9pt,letter]{article}
 \usepackage{graphicx}
+\usepackage{xcolor}
 \usepackage{subfig}
 \usepackage{url}
 \usepackage[T1]{fontenc}
@@ -7,85 +8,99 @@
 \usepackage{tabularx,array}
 \usepackage{multirow}
 \usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\fontfamily{ptm}
+\definecolor{aqua}{RGB}{54, 41, 230}
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
-
-
-\hoffset=-75pt
-\voffset=-95pt
+\newcommand{\aquaText}[1]{\textcolor{aqua}{\textbf{#1}}}
+\newcommand{\para}{\\[.5\baselineskip]}
+\newcommand{\newBull}[1]{\multicolumn{2}{l}{\tabitem #1}\\}
+\newcommand{\newSeg}[3]{\textbf{#1} & {#2}\textemdash{#3}\\}
+\hoffset=-90pt
+\voffset=-105pt
 \textwidth=480pt
-\textheight= 770pt
+\textheight= 800pt
 \thispagestyle{empty}
-\begin{document}
-\begin{center}
 
-\textbf{\Large{Kritika Iyer}}\\
-37 William street apt 2D, Worcester, MA 01609\\
-774-701-2616 | Linkedin:kritikaiyer | kiyer@wpi.edu | github.com/iyerkritika | iyerkritika.github.io\\
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+    \Large\aquaText{Kritika Iyer}\\
+    \large 100 Rivers Edge Drive \# 264, Medford MA, 02155\\
+    774-701-2616 | \href{mailto:kritikaiyer811@gmail.com}{\aquaText{\underline{kritikaiyer811@gmail.com}}} | \href{iyerkritika.github.io}{\aquaText{\underline{iyerkritika.github.io}}} | Linkedin:\href{https://www.linkedin.com/in/kritikaiyer/}{{\aquaText{\underline{kritikaiyer}}}}\\
 \end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\textbf{EDUCATION}\\
-\begin{tabular}{p{0.92\textwidth} r}
-\textbf{Master of Science, Robotics Engineering} & May '18 \\
-Worcester Polytechnic Institute, (WPI), Worcester, MA & GPA: 3.8/4.00 \\[1ex]
-\textbf{Bachelor of Technology, Mechatronics} & May '16 \\
-Shanmugha Arts, Science, Technology  and Research Academy (SASTRA), India
-\end{tabular}
-\\[1\baselineskip]
+\aquaText{OBJECTIVE:} \normalsize I have experience in developing applications from the Embedded to the GUI level and this helps me achieve my goal of becoming a robotics engineer and bring a positive effect in people's lives.\para
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\textbf{SKILLS}\\
-\textbf{Machine learning packages:} Theano, Keras, Tensorflow, Scikit-learn\\
-\textbf{Programming Languages:} C, C++, Python, MATLAB, Embedded C, C\#(.NetFramework)\\
-\textbf{Software and Tools:} OpenCV, Git, ROS, Gazebo, Simulink, OpenRave, OMPL, Solidworks \\
-\textbf{Design Software:} ProE, AutoCAD, LabVIEW, CODESYS, Solidworks, Ansys, COMSOL\\
-\textbf{Boards:} Arduino, PIC, Raspberry Pi\\[1\baselineskip]
+\aquaText{SKILLS}\para 
+\begin{tabular}{p{0.95\textwidth}}
+    \textbf{Software and Tools:} ROS, Gazebo, OpenCV, OMPL, Simulink, Solidworks, Git, Mercurial\\
+    \textbf{Programming Languages:} C++, C, Python, MATLAB, Embedded C, C\#(.NetFramework)\\
+    \textbf{Machine learning packages:} Theano, Keras, Tensorflow, Scikit-learn, AWS(RoboMaker)\\
+    % \textbf{Design Software:} ProE, AutoCAD, LabVIEW, CODESYS, Solidworks, Ansys, COMSOL, ProCreo\\
+    \textbf{Boards:} Arduino, PIC, Raspberry Pi, STM32, Sciopta, JetsonTX2\\
+\end{tabular}\para
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\textbf{EXPERIENCE}\\
+\aquaText{EXPERIENCE}\para
 \begin{tabular}{p{0.89\textwidth} r}
-	\textbf{Full-time: FESTO Corporation} & June '18 \textemdash Present \\
-  \multicolumn{2}{l}{\tabitem Designing and coding Graphical interfaces for products and test stands}\\
-  \multicolumn{2}{l}{\tabitem Programming PLCs to control various devices to work as one product.}\\
-  \multicolumn{2}{l}{\tabitem Working on firmware development for products in the liquid handling industry.}\\\vspace{0.1mm}
-  \textbf{Internship: Persimmon Technologies} & July '17 \textemdash Aug '17 \\
-  \multicolumn{2}{l}{\tabitem Designed a test bed in Solidworks with 25 individual components and 221 assembled components for Encoders}\\
-  \multicolumn{2}{l}{\tabitem Performed trade off analysis to make most efficient and cost effective design.}\\
-  \multicolumn{2}{l}{\tabitem Toleranced parts and made sure all standard and custom parts mesh well.}\\\vspace{0.1mm}
-  \textbf{Internship: Maruti Suzuki India Ltd, Gurugram, India} & May '15 \textemdash Jun '15\\
-  \multicolumn{2}{l}{\tabitem Studied trajectory controllers for 6 DOF Fanuc, ABB industrial robots used in car manufacturing.}\\
-  \multicolumn{2}{l}{\tabitem Designed ladder logic for bottle filling station involving complex pick,place and fill operations.}\\
-  \multicolumn{2}{l}{\tabitem Implemented logic on Siemens Programmable Logic Controllers (PLC).}\\
-\end{tabular}\\[1\baselineskip]
+  \newSeg{Medacuity - Software Engineering Specialist}{Sept '19}{Present}
+        \newBull{Working on projects with C++ and \aquaText{CAN Bus} communication for medical devices and robots relating to angiography.}
+        \newBull{Working as a \aquaText{full stack engineer} on projects with \aquaText{C\# and C++, C} for clients in the Medical devices industry.}
+        \newBull{Programming in the back end and front end for client server interfaces for a medical device used to implant of stents. }\\
+  \newSeg{FESTO Corporation - Software Engineer}{June '18}{Sept '19}
+         \newBull{Developed drivers in C\# and LabView for communication via \aquaText{Ethernet, RS232 and, Serial port.}}
+         \newBull{Worked on firmware development on \aquaText{Arduino and STM} for products in the liquid handling industry.}
+         \newBull{Designed and coding Graphical Interfaces using C\#(.NET framework) in Visual studio for products and test benches.}
+         \newBull{Programmed Programmable Logic Controllers (PLCs) in Codesys to control various devices.}\\
+%       \newbull{Improving product capability by introducing predictive maintenance via AI}\\
+    \newSeg{Internship: Persimmon Technologies}{July '17}{Aug '17}
+         \newBull{Designed a test bench for Encoders in Solidworks with 25 individual components and 221 assembled components.}
+         \newBull{Performed trade off analysis for cost and effective design and toleranced parts to ensure proper mesh.}\\
+    \newSeg{Internship: Maruti Suzuki India Ltd, Gurugram, India}{May '15}{Jun '15}
+         \newBull{Studied trajectory controllers for 6 DOF Fanuc, ABB industrial robots used in car manufacturing.}
+         \newBull{Designed ladder logic for bottle filling station involving complex pick,place and fill operations using Siemens PLC.}
+\end{tabular}\para
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\textbf{PROJECTS}\\
-\begin{tabular}{p{0.72\textwidth} r}
-\\
- \textbf{Deep Reinforcement learning on a socially assitive robot (PABI)} & Jan '18\textemdash May '18\\
-  \multicolumn{2}{l}{\tabitem Extracting features from images of faces and training neural network on those features(currently (61.13\%)}\\
-  \multicolumn{2}{l}{\tabitem Designing reinforcement learning algorithm to customize sessions with children based on emotion and attention}\\\\
-  \textbf{Deep learning for robot perception} & Aug '17 \textemdash Dec '17\\
-  \multicolumn{2}{l}{\tabitem Designed a Convolutional Neural Network with different layers of flattening, max-pooling and dropouts.}\\
-  \multicolumn{2}{l}{\tabitem Trained on Kaggle dataset and achieved an accuracy of 68.5\%  (highest recorded for this dataset is 71\%)}\\
-  \multicolumn{2}{l}{\tabitem Implemented Harr-face detect and the model obtained from training to detect emotions in real-time video feed.}\\\\
-%   \textbf{Manta Ray fin analysis} & Feb '17 \textemdash June' 17 \\
-%   \multicolumn{2}{l}{\tabitem Modeled a manta ray in Solidworks and simulating the fin movement in COMSOL}\\
-%   \multicolumn{2}{l}{\tabitem Analyzed the effect of friction and fluid velocity on thrusts produced by the fin}\\
-%   \multicolumn{2}{l}{\tabitem Designed a fin model to overcome the effects}\\
-  \textbf{Safe Driving using MPC for Autonomous Vehicles} & Jan '17 \textemdash May '17\\
-  \multicolumn{2}{l}{\tabitem Controlled a car using  Kinematic Bicycle model and model predictive control(MPC).}\\
-  \multicolumn{2}{l}{\tabitem Worked in MATLAB to simulate results using Fmincon and Yalmip libraries.}\\
-  \multicolumn{2}{l}{\tabitem Implemented MPC to achieve safe driving diversion from reference trajectory for obstacle avoidance.}\\\\
-  \textbf{Modular teleoperation Framework} & Feb '17 \textemdash May '17\\
-  \multicolumn{2}{l}{\tabitem Developed an algorithm for complex master-slave coordination between manipulators and haptic devices.}\\
-  \multicolumn{2}{l}{\tabitem Implemented it in Gazebo using ROS on davinci and ABB IRB 120 robot.}\\\\
-  \textbf{Mapping and Motion Planning for RC Car} & Jan '17 \textemdash May '17\\
-  \multicolumn{2}{l}{\tabitem Implemented A*, RRT*, and ARA* algorithms using C++ }\\
-  \multicolumn{2}{l}{\tabitem Compared optimality, completeness, space and time complexity in 3 different Gazebo worlds using ROS.}\\\\
-  \textbf{Motion compensation during surgery} & Oct '16 \textemdash Dec '16\\
-  \multicolumn{2}{l}{\tabitem Implemented motion compensation techniques using EKF(Extended Kalman Filter) and Fourier series}\\
-  \multicolumn{2}{l}{\tabitem Visualized using teleoperation on daVinci in Gazebo using ROS}\\\\
-%   \textbf{MANTA Ray fin actuation} & Sept '16 \textemdash Dec '16\\
-%   \multicolumn{2}{l}{\tabitem Fabricated tiny Manta rays from 3D printed molds with silicone dragon skin 10.}\\ \multicolumn{2}{l}{\tabitem Actuated the Manta rays using Nitinol Shape memory alloy wires and pneumatic actuators.}\\
-  \textbf{Kiosk for Autistic Children} & Oct '15 \textemdash June '16\\
-  \multicolumn{2}{l}{\tabitem Designed and fabricated a gaming kiosk with various motor skill enhancement tasks integrated into it}\\ \multicolumn{2}{l}{\tabitem Controlled the system to track the speed of performance, gripping methods and overall improvement}\\ \multicolumn{2}{l}{\tabitem PIC16F877A and got input from various sensors.}\\
+\aquaText{EDUCATION}\para
+\begin{tabular}{p{0.93\textwidth} r}
+    \newSeg{Master of Science, Robotics Engineering}{Aug '16}{May '18}
+        Worcester Polytechnic Institute, (WPI), Worcester, MA & GPA: 3.8/4.00 \\[1ex]
+    \newSeg{Bachelor of Technology, Mechatronics}{July '12}{May '16}
+        Shanmugha Arts, Science, Technology  and Research Academy (SASTRA), India
+\end{tabular}\para
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\aquaText{PROJECTS}\para
+\begin{tabular}{p{0.93\textwidth} r}
+    \newSeg{Emotion and Attention level detection using deep learning}{Aug '17}{May '18}
+        \newBull{Designed a Convolutional Neural Network(CNN) with different layers of flattening, max-pooling and dropouts.}
+        \newBull{Trained on Kaggle data set using \aquaText{OpenCV} to get an accuracy of \aquaText{68.5\%}  (highest recorded for this data set is \aquaText{71\%}.)}
+        \newBull{Extracted features from images of faces and trained a neural network to detect the emotions to an accuracy of \aquaText{85.19\%}.}
+        \newBull{Detected emotions and attention level in real-time video captured by  a socially assistive robot (PABI).}\\
+  \newSeg{Modular teleoperation Framework}{Feb '17}{May '17}
+       \newBull{Developed an algorithm for complex client-server coordination between manipulators and haptic devices.}
+       \newBull{Implemented it in Gazebo using ROS on \aquaText{daVinci and ABB IRB 120 robot}.}\\
+  \newSeg{Motion compensation during surgery}{Oct '16}{Dec '16}
+       \newBull{Implemented motion compensation techniques using Extended Kalman Filter(EKF) and Fourier series.}
+       \newBull{Visualized using teleoperation on daVinci in \aquaText{Gazebo using ROS}.}\\
+           \newSeg{Mapping and Motion Planning for RC Car}{Jan '17}{May '17}
+        \newBull{Implemented \aquaText{A*, RRT*, and ARA*} algorithms in C++ for motion planning through an obstacle course. }
+        \newBull{Compared optimality, completeness, space and time complexity in 3 different Gazebo worlds using ROS.}
+        \newBull{Programmed RRT* and A* in \aquaText{OpenRave} with the PR2 robot model.}\\
+%  \newSeg{Manta Ray fin analysis}{Feb '17}{June' 17}
+    %   \newBull{Modeled a manta ray in Solidworks and simulating the fin movement in COMSOL}
+    %   \newBull{Analyzed the effect of friction and fluid velocity on thrusts produced by the fin}
+    %   \newBull{Designed a fin model to overcome the effects}\\
+    \newSeg{Safe Driving using Model Predictive Control (MPC) for Autonomous Vehicles}{Jan '17}{May '17}
+       \newBull{Implemented MPC to achieve safe driving diversion from reference trajectory for obstacle avoidance.}
+       \newBull{Worked in \aquaText{MATLAB} to simulate Kinematic Bicycle model on a car using \aquaText{Fmincon and Yalmip} libraries.}\\
+%   \newSeg{MANTA Ray fin actuation}{Sept '16}{June'17}
+%       \newBull{Modelled and Fabricated tiny Manta rays in Solidworks from 3D printed molds with silicone dragon skin 10.}
+%       \newBull{Actuated the Manta rays using Nitinol Shape memory alloy wires and pneumatic actuators.}
+%       \newBull{Analyzed the effect of friction and fluid velocity on fin and designed a model to overcome the effects.}\\
+%   \newSeg{Kiosk for Autistic Children}{Oct '15}{June '16}
+%       \newBull{Designed and fabricated a gaming kiosk with various motor skill enhancement tasks integrated into it.} 
+%       \newBull{Controlled the system to track the speed of performance, gripping methods and overall improvement.} 
+%       \newBull{Programmed a PIC16F877A and got input from various sensors to record improvement for trials.}\\
 \end{tabular}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
